@@ -1,0 +1,19 @@
+/*// assets/css/app.scss
+
+// customize some Bootstrap variables
+$primary: darken(#428bca, 20%);
+
+// the ~ allows you to reference things in node_modules
+
+*/
+
+
+$theme-colors: (
+        "primary": #1678a5
+);
+@import "~bootstrap/scss/bootstrap";
+
+body {
+    background-color: lightgrey;
+}
+
