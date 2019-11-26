@@ -37,3 +37,7 @@ final class Version20191120133003 extends AbstractMigration
         $this->addSql('ALTER TABLE program DROP category_id');
     }
 }
+
+
+
+
