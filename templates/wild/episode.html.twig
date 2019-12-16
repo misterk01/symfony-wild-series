@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+{% block title %}{% endblock %}
+
+{% block body %}
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{{ program.poster }}" alt="Poster">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ program.title }}</h5>
+                        <p class="card-text">{{ program.summary }}</p>
+                        <a href="{{ path('wild_program' ,{slug: program.title|lower|replace({' ':'-'})}) }}"
+                           class="btn btn-primary">Voir la série</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <p>Title : {{ episode.title }} </p>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Numéro épisode : {{ episode.number }}</h5>
+                        <p class="card-text">Synopsis : {{ episode.synopsis }}</p>
+                        <a href="{{ path('wild_season' ,{id:season.id}) }}" class="btn btn-primary">Voir la saison</a>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+{% endblock %}
