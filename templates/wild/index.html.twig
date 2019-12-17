@@ -6,6 +6,7 @@
         <div>
             <h2>{{ loop.index }} / {{ program.title }} - Catégorie : {{ program.category.name }}</h2>
             <p>{{ program.summary }}</p>
+            <p><img src="{{ program.poster }}"></p>
             <a href="{{ path('wild_program' ,{slug:program.title|lower|replace({" ":"-"})}) }}" class="btn btn-primary">more details here !</a>
         </div>
     {% else %}

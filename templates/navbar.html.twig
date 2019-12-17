@@ -11,21 +11,19 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 </li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                       aria-haspopup="true" aria-expanded="false">
-                        Catégories
-                    </a>
+                <li class="nav-item">
+                    <a class="nav-link dropdown-toggle" href="{{ path('program_index')}}"id="navbarDropdownMenuLink" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">Catégories</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="#">Action</a>
                         <a class="dropdown-item" href="#">Comédie</a>
                         <a class="dropdown-item" href="#">Drame</a>
                         <a class="dropdown-item" href="#">Suspense</a>
-                        <a class="dropdown-item" href="#">Horreur</a>
+                        <a class="dropdown-item" href="{{ path('program_index')}}">Horreur</a>
                         <a class="dropdown-item" href="#">+ 18 ans !!!</a>
                     </div>
                 </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="{{ path('program_index')}}">Séries</a>
                 </li>

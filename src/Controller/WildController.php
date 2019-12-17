@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 
+use App\Entity\Actor;
 use App\Entity\Season;
 use App\Entity\Episode;
 use App\Entity\Program;
@@ -166,6 +167,18 @@ class WildController extends AbstractController
 
         {$season = $episode->getSeason();
             return $this->render('wild/episode.html.twig', ['episode'=>$episode, 'season'=>$season, 'program'=>$season->getProgram()]);
+        }
+
+
+    /**
+     * Getting an actor with an id
+     * @Route("/actor/{id}", name="_actor")
+     * @return Response
+     */
+        public function showActor(Actor $actor): Response
+
+        {
+            return $this->render('wild/actor.html.twig', ['actor'=>$actor]);
         }
 
 }

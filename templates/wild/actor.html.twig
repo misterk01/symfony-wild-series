@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Actor index{% endblock %}
+
+{% block body %}
+    <h1>Acteur par série</h1>
+    <h3>{{ actor.name }}</h3>
+    {% for program in actor.programs %}
+        <td>
+            <tr>{{ program.title }}</tr><br>
+            <tr><img src="{{ program.poster }}"></tr><br>
+            <tr> <a href="{{ path('program_show', {'id': program.id}) }}">show</a></tr>
+        </td>
+
+    {% endfor %}
+{% endblock %}
