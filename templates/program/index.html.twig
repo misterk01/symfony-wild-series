@@ -8,24 +8,23 @@
     <table class="table">
         <thead>
             <tr>
+                <th>Poster</th>
                 <th>Id</th>
                 <th>Title</th>
                 <th>Summary</th>
-                <th>Poster</th>
                 <th>actions</th>
             </tr>
         </thead>
         <tbody>
         {% for program in programs %}
             <tr>
+                <td><img src="{{ program.poster }}"></td>
                 <td>{{ program.id }}</td>
                 <td>{{ program.title }}</td>
                 <td>{{ program.summary }}</td>
-                <td><img src="{{ program.poster }}"></td>
                 <td>
-                    <a href="{{ path('program_show', {'id': program.id}) }}">show</a>
-                    <a href="{{ path('program_edit', {'id': program.id}) }}">edit</a>
-                    <a href="{{ path('program_edit', {'id': program.id}) }}">edit</a>
+                    <a href="{{ path('program_show', {'id': program.id}) }}">Show</a>
+                    <a href="{{ path('program_edit', {'id': program.id}) }}">Edit</a>
                 </td>
             </tr>
         {% else %}

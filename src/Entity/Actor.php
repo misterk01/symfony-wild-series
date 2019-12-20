@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
@@ -25,6 +26,7 @@ class Actor
 
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Program", inversedBy="actors")
+     * @ORM\JoinTable(name="actor_program")
      */
     private $programs;
 

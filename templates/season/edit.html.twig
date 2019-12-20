@@ -4,6 +4,7 @@
 
 {% block body %}
     <h1>Edit Season</h1>
+    <td><img src="{{ season.program.poster }}"></td>
 
     {{ include('season/_form.html.twig', {'button_label': 'Update'}) }}
 

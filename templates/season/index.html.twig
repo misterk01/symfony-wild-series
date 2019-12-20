@@ -8,15 +8,17 @@
     <table class="table">
         <thead>
             <tr>
+                <th>Poster</th>
                 <th>Id</th>
                 <th>Year</th>
                 <th>Description</th>
-                <th>actions</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
         {% for season in seasons %}
             <tr>
+                <td><img src="{{ season.program.poster }}"></td>
                 <td>{{ season.id }}</td>
                 <td>{{ season.year }}</td>
                 <td>{{ season.description }}</td>
